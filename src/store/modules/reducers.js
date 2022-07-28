@@ -1,0 +1,1 @@
+export {reducer as Movies} from "./movies/reducer"

@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["src/*"],
+            "@c/*": ["src/components/*"],
+            "@s/*": ["src/styles/*"],
+            "@p/*": ["public/*"]
+        },
+        "forceConsistentCasingInFileNames": true
+    },
+    "exclude": ["./out/**/*", "./node_modules/**/*"]
+}
