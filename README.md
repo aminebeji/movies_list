@@ -36,4 +36,16 @@
 **L'utilisation de TypeScript est un plus.**
 
 ### Important
-/!\ La suppression du comportement asynchrone dans `movies.js` entraînera une annulation du test.
+/!\ La suppression du comportement asynchrone dans `movies.js` entraînera une annulation du test    
+
+
+### TODO :
+
+- [x] Afficher list des films .
+- [x] Card d'un film.
+- [x] Filter System.
+- [x] Recherche System.
+- [ ] Rate System.
+- [ ] Pagination.
+- [x] Supprimer d'un film.
+- [ ] tests unitaires.

@@ -1,5 +1,6 @@
 import { MoviesPage } from '@/components/pages/Movies'
 import { wrapper } from '@/store'
+import { INIT_CATEGORYLIST } from '@/store/modules/actions'
 import { INIT_MOIVES_ACTIONS } from '@/store/modules/movies/action'
 export default function Index() {
   return (
@@ -10,4 +11,5 @@ export default function Index() {
 
 export const getServerSideProps = wrapper.getServerSideProps((store) => async ({ }) => { 
      await store.dispatch(INIT_MOIVES_ACTIONS())
+     await store.dispatch(INIT_CATEGORYLIST(false))
 })

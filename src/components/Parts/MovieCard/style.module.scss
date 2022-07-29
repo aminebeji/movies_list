@@ -1,4 +1,15 @@
 .Container {
-    width: 275px;
-    overflow: hidden;
+  width: 275px;
+  overflow: hidden;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  .Thumbnail {
+    transition: 0.5s;
+  }
+}
+.Container:hover {
+  .Thumbnail {
+    transform: scale(1.1);
+  }
 }

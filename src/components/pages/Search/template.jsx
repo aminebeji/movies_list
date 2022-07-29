@@ -1,14 +1,15 @@
 import { Layout } from '@/components/Layout'
-import { Header } from '@/components/Sections/Header'
+import { SearchContainer } from '@/components/Parts/SearchContainer'
 import { MoviesLists } from '@/components/Sections/MoviesLists'
 import React from 'react'
 
-function MoviesPage() {
+function SearchPage() {
   return (
     <Layout>
+      <SearchContainer />
       <MoviesLists />
     </Layout>
   )
 }
 
-export default MoviesPage
+export default SearchPage

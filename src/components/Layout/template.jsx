@@ -1,5 +1,6 @@
 import { SEO } from '@/__mocks__/info';
 import Head from 'next/head';
+import Header from '@c/Sections/Header/template';
 
 function Layout({ children }) {
     const { title, description, keywords, image } = SEO
@@ -28,6 +29,8 @@ function Layout({ children }) {
                 <meta prefix="og: http://ogp.me/ns#" property="og:description" content={description} />
             </Head>
             <main className="container xl mx-auto" >
+            <Header />
+
                 {children}
             </main>
         </>
