@@ -7,7 +7,7 @@ import { RATE_STATUS } from '@/utils/consts';
 function RateButtons({ Initlikes, InitDislikes, videoId }) {
   const { status, mainLikes, mainDislike, ChangeStatus } = RateHooks(videoId, Initlikes, InitDislikes)
   return (
-    <div className='flex justify-between gap-5 items-center'>
+    <div key={videoId} className='flex justify-between gap-5 items-center'>
       <div className={`flex justify-between gap-1 items-center ${S.SvgButton}`}>
         <div onClick={() => {
           ChangeStatus(RATE_STATUS.DISLIKE, videoId)
