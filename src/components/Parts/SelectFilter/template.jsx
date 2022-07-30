@@ -4,7 +4,7 @@ import S from "./style.module.scss"
 function SelectFilter() {
     const { CategoryList, CATEGORY, ChangeCategory } = SearchHooks()
     return (
-        <select value={CATEGORY} onChange={ChangeCategory} className={`${S.SelectFilter} shadow rounded p-4`}>
+        <select id="category-filter" value={CATEGORY} onChange={ChangeCategory} className={`${S.SelectFilter} shadow rounded p-4`}>
             <option value={""}>
                 category
             </option>

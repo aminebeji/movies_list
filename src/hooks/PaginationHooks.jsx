@@ -12,7 +12,6 @@ function PaginationHooks() {
     }, [movies])
     const onChangePage = (page) => {
         let newPagination = ChangePagination({ ...pagination, currentPage: page }, movies)
-        console.log('this is the newPagination ==>', newPagination)
         setPagination(newPagination)
     }
     const Next = () => {

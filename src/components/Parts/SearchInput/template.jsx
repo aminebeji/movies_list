@@ -5,12 +5,18 @@ import { useSelector } from 'react-redux';
 import SearchHooks from '@/hooks/SearchHooks';
 
 function SearchInput() {
-  const { onChangeKeyWord, KEYWORD, searchClcik } = SearchHooks()
+  const { onChangeKeyWord, KEYWORD, searchClick } = SearchHooks()
   return (
     <div className={`${S.InputContainer} shadow bg-zinc-500`}>
-      <div onClick={searchClcik}  >  <Search /></div>
+      <div onClick={searchClick}  >  <Search /></div>
       <input
+        id="search-input"
         className="bg-zinc-500"
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            searchClick()
+          }
+        }}
         placeholder='search'
         name="search"
         value={KEYWORD}

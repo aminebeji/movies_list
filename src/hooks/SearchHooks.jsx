@@ -15,7 +15,7 @@ function SearchHooks() {
   const onChangeKeyWord = (e) => {
     dispatch(SEARCH_TYPYING(e.target.value))
   }
-  const searchClcik = () => {
+  const searchClick = () => {
     let link = `/search/${KEYWORD}`
     if (CATEGORY) link = `${link}?category=${CATEGORY}`
     if (KEYWORD) router.push(link)
@@ -25,7 +25,7 @@ function SearchHooks() {
     dispatch(CHANGE_MOVIES_CATEGORY(e.target.value))
   }
 
-  return { onChangeKeyWord, KEYWORD, searchClcik, emptySearch, CategoryList, CATEGORY, ChangeCategory }
+  return { onChangeKeyWord, KEYWORD, searchClick, emptySearch, CategoryList, CATEGORY, ChangeCategory }
 }
 
 export default SearchHooks

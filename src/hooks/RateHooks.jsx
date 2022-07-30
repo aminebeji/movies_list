@@ -32,7 +32,6 @@ function RateHooks(videoId, VideoLikes, VideoDislikes) {
                         return l
                     }
                 })
-                console.log(newLikes)
                 setLikes(mainLikes - 1)
             }
             if (status === RATE_STATUS.DISLIKE) {
@@ -41,7 +40,6 @@ function RateHooks(videoId, VideoLikes, VideoDislikes) {
                         return d
                     }
                 })
-                console.log(newDislike)
                 setDislike(mainDislike - 1)
             }
             setStatus(RATE_STATUS.NOT_RATED)

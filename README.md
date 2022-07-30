@@ -46,6 +46,12 @@
 - [x] Filter System.
 - [x] Recherche System.
 - [x] Rate System.
-- [ ] Pagination.
+- [x] Pagination.
 - [x] Supprimer d'un film.
-- [ ] tests unitaires.
+- [x] tests unitaires.
+
+### Run Application : (node version used = v16.10.0) 
+  npm install
+  npm run dev
+### Run testing E2E with cypress :
+npm run cypress
