@@ -14,6 +14,7 @@ function MovieCard({ movie }) {
           loader={({ src }) => {
             return src
           }}
+          alt={movie.title}
           className={S.Thumbnail}
           width={90}
           height={110}
