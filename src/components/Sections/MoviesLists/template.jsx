@@ -9,7 +9,7 @@ function MoviesLists() {
     <React.Fragment>
       <div id="movie-list" className='flex justify-between items-center flex-wrap gap-x-15 gap-y-10 max-w-screen-lg mx-auto py-12 '>
         {movies.map((movie, index) => {
-          return <MovieCard key={index} movie={movie} />
+          return <MovieCard key={movie.id} movie={movie} />
         })}
       </div>
       {movies.length > 0 && <Pagination onChangePage={onChangePage} pages={pages} Next={Next} Previous={Previous} />}
