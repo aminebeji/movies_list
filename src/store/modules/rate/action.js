@@ -6,7 +6,7 @@ export const INIT_RATES_ACTIONS = () => async (dispatch) => {
   let Dislikes = getValue("dislike");
   dispatch({
     type: RATE_TYPES.INIT_RATES,
-    payload: { Likes: Likes ? Likes : [], Dislikes: Dislikes ? Dislikes : [] },
+    payload: { Likes: Likes ? [...new Set(Likes)] : [], Dislikes: [...new Set(Dislikes)] ? Dislikes : [] },
   });
 };
 
