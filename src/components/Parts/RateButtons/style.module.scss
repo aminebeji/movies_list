@@ -1,9 +1,19 @@
 .SvgButton {
-    svg {
-        width: 16px;
-        cursor: pointer;
-    }
-    span {
-        font-size: 12px;
-    }
+  svg {
+    width: 16px;
+    cursor: pointer;
+  }
+  span {
+    font-size: 12px;
+  }
+}
+.IsDisliked {
+  svg {
+    fill: red;
+  }
+}
+.IsLiked {
+  svg {
+    fill: blue;
+  }
 }

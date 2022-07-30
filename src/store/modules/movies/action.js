@@ -1,11 +1,9 @@
 import { movies$ } from "@/__mocks__/movies";
 import { MOVIE_TYPES } from "./types";
-import { AddRate, CheckRating } from "@/utils/rateSystem";
 
 export const INIT_MOIVES_ACTIONS = () => async (dispatch) => {
   let movies = await movies$;
-  movies = CheckRating(movies);
-  dispatch({ type: MOVIE_TYPES.FETCH_MOVIES_SUCCESS, payload: movies });
+  dispatch({ type: MOVIE_TYPES.FETCH_MOVIES_SUCCESS, payload: {movies} });
 };
 
 export const INIT_MOIVES_SEARCH_ACTIONS = (data) => async (dispatch) => {
@@ -19,7 +17,7 @@ export const INIT_MOIVES_SEARCH_ACTIONS = (data) => async (dispatch) => {
       } else return movie;
     }
   });
-  dispatch({ type: MOVIE_TYPES.FETCH_MOVIES_SUCCESS, payload: movies });
+  dispatch({ type: MOVIE_TYPES.FETCH_MOVIES_SUCCESS, payload: {movies} });
 };
 
 export const CHANGE_MOVIES_CATEGORY =
@@ -46,7 +44,7 @@ export const CHANGE_MOVIES_CATEGORY =
         }
       }
     });
-    dispatch({ type: MOVIE_TYPES.FETCH_MOVIES_SUCCESS, payload: movies });
+    dispatch({ type: MOVIE_TYPES.FETCH_MOVIES_SUCCESS, payload: {movies} });
   };
 
 export const DELETE_MOVIE = (id) => async (dispatch, getState) => {
@@ -56,13 +54,5 @@ export const DELETE_MOVIE = (id) => async (dispatch, getState) => {
       return movie;
     }
   });
-  dispatch({ type: MOVIE_TYPES.FETCH_MOVIES_SUCCESS, payload: movies });
-};
-
-//***********RATE ACTIONS****************
-
-export const ADD_RATE = (id, status) => async (dispatch, getState) => {
-  let movies = getState().Movies.movies;
-  movies = AddRate(id, status, movies);
-  dispatch({ type: MOVIE_TYPES.FETCH_MOVIES_SUCCESS, payload: movies });
+  dispatch({ type: MOVIE_TYPES.FETCH_MOVIES_SUCCESS, payload: {movies} });
 };

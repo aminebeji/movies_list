@@ -4,7 +4,3 @@ export const SEO = {
     keywords: "movies,films,rate,imdb",
     image: "",
 }
-
-export const pagination = {
-    nbParPage : 6
-}

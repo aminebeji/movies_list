@@ -1,15 +1,14 @@
-import { MoviesPage } from '@/components/pages/Movies'
-import { wrapper } from '@/store'
-import { INIT_CATEGORYLIST } from '@/store/modules/actions'
-import { INIT_MOIVES_ACTIONS } from '@/store/modules/movies/action'
+import { MoviesPage } from "@/components/pages/Movies";
+import { wrapper } from "@/store";
+import { INIT_CATEGORYLIST ,INIT_MOIVES_ACTIONS } from "@/store/modules/actions";
 export default function Index() {
-  return (
-    <MoviesPage />
-  )
+  return <MoviesPage />;
 }
 
-
-export const getServerSideProps = wrapper.getServerSideProps((store) => async ({ }) => { 
-     await store.dispatch(INIT_MOIVES_ACTIONS())
-     await store.dispatch(INIT_CATEGORYLIST(false))
-})
+export const getServerSideProps = wrapper.getServerSideProps(
+  (store) =>
+    async ({}) => {
+      await store.dispatch(INIT_MOIVES_ACTIONS());
+      await store.dispatch(INIT_CATEGORYLIST(false));
+    }
+);

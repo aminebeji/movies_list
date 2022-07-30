@@ -45,7 +45,7 @@
 - [x] Card d'un film.
 - [x] Filter System.
 - [x] Recherche System.
-- [ ] Rate System.
+- [x] Rate System.
 - [ ] Pagination.
 - [x] Supprimer d'un film.
 - [ ] tests unitaires.

@@ -1,9 +1,16 @@
 import { SEO } from '@/__mocks__/info';
 import Head from 'next/head';
 import Header from '@c/Sections/Header/template';
+import { useDispatch } from 'react-redux';
+import { INIT_RATES_ACTIONS } from '@/store/modules/actions';
+import { useEffect } from 'react';
 
 function Layout({ children }) {
     const { title, description, keywords, image } = SEO
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(INIT_RATES_ACTIONS())
+    }, [])
     return (
         <>
             <Head>
@@ -29,7 +36,7 @@ function Layout({ children }) {
                 <meta prefix="og: http://ogp.me/ns#" property="og:description" content={description} />
             </Head>
             <main className="container xl mx-auto" >
-            <Header />
+                <Header />
 
                 {children}
             </main>
